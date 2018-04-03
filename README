@@ -63,7 +63,7 @@
   $ lunch lineage_skomer-eng
 
 
-  - Build CM11
+  - Build CM14.1
 
   $ export USE_CCACHE=1
   $ make -j4 skomer
