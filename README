@@ -20,29 +20,29 @@
 
 * Description
 
-  This repository is for CM11 on Samsung X Cover 2 a.k.a Samsung Skomer.
+  This repository is for CM14.1 on Samsung X Cover 2 a.k.a Samsung Skomer.
   It's still a work in progress.
 
 * How To Build
 
   - Make a workspace
 
-  $ mkdir -p ~/cyanogenmod
-  $ cd ~/cyanogenmod
+  $ mkdir -p ~/lineage
+  $ cd ~/lineage
 
 
   - Do repo init & sync
 
-  $ repo init -u git://github.com/CyanogenMod/android.git -b cm-11.0
+  $ repo init -u git://github.com/LineageOS/android.git -b cm-11.0
 
 
   - Create .repo/local_manifests/skomer.xml with the following content:
 
   <?xml version="1.0" encoding="UTF-8"?>
   <manifest>
-      <project name="flxo/android_device_samsung_skomer" path="device/samsung/skomer" />
-      <project name="flxo/android_kernel_samsung_skomer" path="kernel/samsung/skomer" revision="jellybean" />
-      <project name="flxo/android_vendor_samsung_skomer" path="vendor/samsung/skomer" />
+      <project name="shamu2811/android_device_samsung_skomer" path="device/samsung/skomer" />
+      <project name="shamu2811/android_kernel_samsung_skomer" path="kernel/samsung/skomer" />
+      <project name="shamu2811/android_vendor_samsung_skomer" path="vendor/samsung/skomer" />
   </manifest>
 
   $ repo sync
@@ -50,7 +50,7 @@
 
   - Setup vendor
 
-  $ ./vendor/cm/get-prebuilts
+  $ ./vendor/lineage/get-prebuilts
 
 
   - Pull all not merged fixes from gerrit:
@@ -60,13 +60,13 @@
   - Setup environment
 
   $ source build/envsetup.sh
-  $ lunch cm_skomer-eng
+  $ lunch lineage_skomer-eng
 
 
   - Build CM11
 
   $ export USE_CCACHE=1
-  $ make -j4 bacon
+  $ make -j4 skomer
 
 
 * Thanks
@@ -81,3 +81,4 @@
   marcin
   diego-ch
   maclaw
+  flxo
