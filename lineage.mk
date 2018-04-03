@@ -24,7 +24,7 @@ $(call inherit-product, device/samsung/skomer/skomer.mk)
 
 # Device identifier
 PRODUCT_DEVICE := skomer
-PRODUCT_NAME := lineage_skomer
+PRODUCT_NAME := cm_skomer
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := GT-S7710
 PRODUCT_MANUFACTURER := samsung
